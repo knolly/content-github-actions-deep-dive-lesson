@@ -61,7 +61,7 @@ jobs:
           args: userguide.md -t html -o docs/index.html
       
       - name: deploy site
-        uses: knolly/githup-pages-deploy-action@4
+        uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           folder: docs
           branch: gh-pages
