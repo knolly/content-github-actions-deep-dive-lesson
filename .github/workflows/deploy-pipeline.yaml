@@ -25,7 +25,7 @@ jobs:
     needs: lint
     steps:
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -61,7 +61,7 @@ jobs:
           args: userguide.md -t html -o docs/index.html
       
       - name: deploy site
-        uses: JamesIves/githup-pages-deploy-action@4
+        uses: knolly/githup-pages-deploy-action@4
         with:
           folder: docs
           branch: gh-pages
